@@ -1,0 +1,288 @@
+body {
+    color: white;
+    background-color: #fe8103;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.screen {
+    background-color: #013743;
+    display:flex;
+    flex-direction:column;
+    height: 700px; 
+    width: 335px;
+    border: 15px black solid;
+    border-radius: 5px;
+}
+
+.sombra {
+    box-shadow:
+    0.8px 0.8px 2.7px rgba(0, 0, 0, 0.062),
+    2.1px 2.1px 6.9px rgba(0, 0, 0, 0.089),
+    4.3px 4.3px 14.2px rgba(0, 0, 0, 0.111),
+    8.8px 8.8px 29.2px rgba(0, 0, 0, 0.138),
+    24px 24px 80px rgba(0, 0, 0, 0.2);
+
+    -webkit-box-shadow:
+    0.8px 0.8px 2.7px rgba(0, 0, 0, 0.062),
+    2.1px 2.1px 6.9px rgba(0, 0, 0, 0.089),
+    4.3px 4.3px 14.2px rgba(0, 0, 0, 0.111),
+    8.8px 8.8px 29.2px rgba(0, 0, 0, 0.138),
+    24px 24px 80px rgba(0, 0, 0, 0.2);
+}
+
+.screen > nav {
+    background-color: #132c33;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    /* height: 20px; */
+    padding: 0 2px;
+}
+
+.reloj {
+    display: flex;
+    align-self: flex-start;
+}
+
+.hora {
+    font-weight: bold;
+}
+
+.am-pm {
+    font-size: small;
+    padding: 2px 0 0 2px;
+}
+
+.header-logo-banco {
+    height: 80px;
+    padding: 10px 80px 0 80px;
+}
+
+.header-logo-banco > img {
+    object-fit: cover;
+}
+
+/* https://stackoverflow.com/a/20352949 */
+.grid {
+    flex:1;
+}
+
+.grid-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    height: 460px;
+}
+
+.carousel,
+.carousel-inner,
+.slide,
+.carousel-item {
+    height: 541px;
+}
+
+
+/* tamaño fullscreen */
+/* .h-621,
+.offcanvas {
+    height: 621px;
+}
+ */
+
+
+
+.offcanvas.show {
+    height: 621px;
+}
+
+.offcanvas-backdrop.show{
+    opacity: 0;
+}
+
+.offcanvas {
+    background-color: #f6f7f9;
+}
+
+.offcanvas-body {
+    padding: 0;
+}
+
+.caja-vecina-home > section{
+    display: grid;
+    grid-template-areas: 
+    'saldo saldo'
+    'financieras recarga-movil'
+    'pago-servicios recaudacion'
+    'servicios-estado seguros';
+    width: 100%;
+    height: 455px;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    border: none;
+}
+
+.caja-vecina-home > section,
+.caja-vecina-home .btn-saldo {
+    padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+}
+
+.caja-vecina-home button:not(.btn-saldo) {
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: #ffffff;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.offcanvas section ion-icon {
+    color: #004f9e;
+    font-size: 32px;
+    padding: 0 2px 0 2px;
+}
+
+.btn-saldo {
+    grid-area: saldo;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border-color: transparent;
+    text-align: left;
+}
+
+/* https://stackoverflow.com/a/29019349 */
+.btn-saldo:before {
+    content:"";
+    background-color:#fe8103;
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.btn-financieras {
+    grid-area: financieras;
+}
+
+.btn-recarga-movil {
+    grid-area: recarga-movil;
+}
+
+.btn-pago-servicios {
+    grid-area: pago-servicios;
+}
+
+.btn-recaudacion {
+    grid-area: recaudacion;
+}
+
+.btn-servicios-estado {
+    grid-area: servicios-estado;
+}
+
+.btn-seguros {
+    grid-area: seguros;
+}
+
+.caja-vecina-footer {
+    grid-area: footer;
+}
+
+.caja-vecina-footer ion-icon,
+.btn-saldo ion-icon {
+    color: black;
+    --ionicon-stroke-width: 36px;
+}
+
+.caja-vecina-footer p {
+    font-weight:600;
+}
+
+
+
+
+
+
+
+.grid-item {
+    height: 150px;
+    background-color: #264e5a;
+}
+  
+.grid-item:hover {
+    cursor: pointer;
+    transition: ease-in-out 100ms;
+    background-color: #306170;
+}
+
+/* Botones grid */
+.btn-compraqui {
+    background-color: #ffffff;
+}
+
+.btn-compraqui:hover {
+    background-color: #e4e4e4;
+}
+
+.btn-caja-vecina {
+    background-color: #fe8103;
+}
+
+.btn-caja-vecina:hover {
+    background-color: #eb7500;
+} 
+
+.btn-compraqui > img,
+.btn-caja-vecina > img {
+    height: 50%;
+    width: 80%;
+    object-fit:contain;
+}
+
+.grid-item > div > ion-icon {
+    font-size: 100px;
+    margin-top: 10px;
+}
+
+.footer-navegacion-bottom {
+    background-color: rgb(180, 26, 26);
+}
+
+.footer-btns {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 25px;
+    justify-content: space-around;
+    margin: auto 0;
+    background-color: rgb(29, 29, 29);
+}
+
+/* Clases personalizadas */
+.c-white {
+    color: white;
+    fill: white;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-icon {
+    color: white;
+    padding: 0 2px 0 2px;
+}
